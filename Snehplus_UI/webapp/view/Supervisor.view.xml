@@ -1,0 +1,91 @@
+<mvc:View controllerName="Snehplus_UI.Snehplus_UI.controller.Supervisor" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table" xmlns:l="sap.ui.layout">
+	<Page showHeader="true" title="Supervisor Dashboard" class="sapUiPage" enableScrolling="true">
+		<customHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="User Dashboard" level="H2"/>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://log" type="Transparent" press="onNavBack" ariaLabelledBy="editButtonLabel"/>
+			</Toolbar>
+		</customHeader>
+		<content>
+			<l:BlockLayout id="BlockLayout1"  class="LayoutMargin">
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell  width="40%">
+						<table:Table id="SupervisorTableId" rows="{/Rowset/Row}" selectionMode="Single" visible="true" rowSelectionChange="fnRowSelectionChangeSO" visibleRowCount="12">
+							<table:columns>
+								<table:Column hAlign="Center" width="30%" >
+									<Label text="Product ID" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+				        		<table:Column hAlign="Center" width="30%" >
+									<Label text="Product Name" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="30%" >
+									<Label text="Description" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="30%" >
+									<Label text="Partner" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="20%" >
+									<Label text="Quantity" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text id="_SFC" text="{SFC}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="30%" >
+									<Label text="Unit of Measure" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="30%">
+									<Label text="Quantity Unit" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="30%" >
+									<Label text="Currency" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="30%" >
+									<Label text="Rate" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="40%">
+									<Label text="Total Amount" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{OPERATION}" />
+									</table:template>
+								</table:Column>
+							</table:columns>
+						</table:Table>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button id="button4" text="Delivered" press="onClick"  />
+				<Button id="button5" text="Amount received" press="onClick1" />
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

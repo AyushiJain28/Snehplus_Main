@@ -1,0 +1,38 @@
+namespace Snehplus.DB_Snehplus;
+context DbTables {
+    entity ProductItemData {
+        ProductId   : hana.VARCHAR(30) Not Null;
+        ProductName : hana.VARCHAR(50);
+        Description : hana.VARCHAR(100);
+        Partner     : hana.VARCHAR(50);
+        Quantity    : DecimalFloat;
+        UOM         : hana.VARCHAR(30);
+        QuantityUnit: Integer ;
+        Currency    : hana.VARCHAR(30);
+        Rate        : DecimalFloat;
+        Amount      : DecimalFloat;
+    };
+    entity SignUpInfo {
+        FirstName   : hana.VARCHAR(30) ;
+        LastName   : hana.VARCHAR(30) ;
+        Category	: hana.VARCHAR(30);
+        UserId      : hana.VARCHAR(50) ;
+        Password    : hana.VARCHAR(100) ;
+        Gmail		: hana.VARCHAR(100);
+    };
+    entity CheckoutTableinfo{
+    	ProductId   : hana.VARCHAR(30) Not Null;
+        ProductName : hana.VARCHAR(50);
+        Description : hana.VARCHAR(100);
+        Partner     : hana.VARCHAR(50);
+        Quantity    : DecimalFloat;
+        UOM         : hana.VARCHAR(30);
+        QuantityUnit: Integer ;
+        Currency    : hana.VARCHAR(30);
+        Amount		: DecimalFloat;
+        SGST		: DecimalFloat;
+        CSGST		: DecimalFloat;
+        TotalAmount	: DecimalFloat;
+        DateTime	: UTCTimestamp;
+    };
+};

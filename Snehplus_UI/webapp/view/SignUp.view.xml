@@ -1,0 +1,60 @@
+<mvc:View controllerName="Snehplus_UI.Snehplus_UI.controller.SignUp" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page showHeader="true" title="SignUp" class="sapUiPage" enableScrolling="true" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<FlexBox width="100%" id="box0" alignContent="Center" alignItems="Center" direction="Column" justifyContent="Center">
+				<items>
+					<VBox width="100%" id="hbox0" alignContent="Center" alignItems="Center" justifyContent="Center">
+						<items>
+							<sap.ui.layout:Grid xmlns:sap.ui.layout="sap.ui.layout" id="grid1" hSpacing="2" defaultSpan="XL12 L12 M12 S12">
+                                <sap.ui.layout:content>
+									<FlexBox width="100%" id="f1" class="flexBoxStyle">
+										<items>
+											<Label text="First Name:" width="100%" />
+											<Input placeholder="Enter First Name" width="100%" id="Nameid"/>
+										</items>
+									</FlexBox>
+									<FlexBox width="100%" id="f2" class="flexBoxStyle">
+										<items>
+											<Label text="Last Name: " width="100%" />
+											<Input placeholder="Enter Last Name" width="100%" id="Nameid1"/>
+										</items>
+									</FlexBox>
+									<FlexBox width="100%" id="f3" class="flexBoxStyle">
+										<items>
+											<Label text="User ID: " width="100%" />
+											<Input placeholder="Enter User ID" width="100%" id="userid"/>
+										</items>
+									</FlexBox>
+									<FlexBox width="100%" id="f4" class="flexBoxStyle">
+										<items>
+											<Label text="Password: " width="100%"/>
+											<Input  placeholder="Enter Password" type="Password" width="100%" id="pasid"/>
+										</items>
+									</FlexBox>
+									<FlexBox width="100%" id="f7" class="flexBoxStyle">
+										<items>
+											<Label text="Gmail: " width="100%"/>
+											<Input  placeholder="Enter Gmail:" width="100%" id="gmailid"/>
+										</items>
+									</FlexBox>
+									<FlexBox width="100%" id="f5" class="flexBoxStyle">
+										<items>
+											<ToggleButton id="button11" text="Supervisor" enabled="true" pressed="false" press="onPress" />
+											<ToggleButton id="button12" text="User" enabled="true" pressed="false" press="onPress" />
+										</items>
+									</FlexBox>
+									<FlexBox width="100%" id="f6" class="flexBoxStyle">
+										<items> 
+											<Button id="button3" text="Supervisor SignUp" type="Accept" enabled="false" press="onSignUpPressed"/>
+											<Button id="button7" text="User SignUp" type="Accept" enabled="false" press="onSignUpPressed"/>
+										</items>
+									</FlexBox>
+								</sap.ui.layout:content>
+                            </sap.ui.layout:Grid>
+						</items>
+					</VBox>
+				</items>
+			</FlexBox>
+		</content>
+	</Page>
+</mvc:View>

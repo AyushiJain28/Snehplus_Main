@@ -1,0 +1,42 @@
+<mvc:View controllerName="Snehplus_UI.Snehplus_UI.controller.SignIn" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page showHeader="true" title="SignIn" class="sapUiPage" enableScrolling="true" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<FlexBox width="100%" id="box0" alignContent="Center" alignItems="Center" direction="Column" justifyContent="Center">
+                <items>
+                    <VBox width="100%" id="hbox0" alignContent="Center" alignItems="Center" justifyContent="Center">
+                        <items>
+                        	<sap.ui.layout:Grid xmlns:sap.ui.layout="sap.ui.layout" id="grid1" hSpacing="2" defaultSpan="XL12 L12 M12 S12">
+                		    	<sap.ui.layout:content>
+        		                    <FlexBox width="100%" id="f1" class="flexBoxStyle">
+                            		    <items>
+                    		                <Label text="User ID: " width="100%" />
+            		                        <Input placeholder="Enter UserId" width="100%" id="userid"/>
+                                		</items>
+                        		    </FlexBox>
+                		            <FlexBox width="100%" id="f2" class="flexBoxStyle">
+        		                        <items>
+                                		    <Label text="Password: " width="100%"/>
+                        		            <Input  placeholder="Enter Password" type="Password" width="10rem" id="pasid"/>
+                		                </items>
+        		                    </FlexBox>
+		                            <FlexBox width="100%" id="f3" class="flexBoxStyle">
+										<items>
+											<ToggleButton id="button9" text="Supervisor" enabled="true" pressed="false" press="onPress" />
+											<ToggleButton id="button10" text="User" enabled="true" pressed="false" press="onPress" />
+										</items>
+									</FlexBox>
+									<FlexBox width="100%" id="f4" class="flexBoxStyle">
+										<items>
+											<Button id="button8" text="Supervisor Login" type="Accept" enabled="false" press="onLogin"/>
+											<Button id="button6" text="User Login" type="Accept" enabled="false" press="onLogin"/>
+										</items>
+									</FlexBox>
+								</sap.ui.layout:content>
+                            </sap.ui.layout:Grid>
+                        </items>
+                    </VBox>
+                </items>
+            </FlexBox>
+		</content>
+	</Page>
+</mvc:View>

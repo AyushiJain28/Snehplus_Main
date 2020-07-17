@@ -1,0 +1,57 @@
+ID: Snehplus
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: Snehplus_UI
+    type: html5
+    path: Snehplus_UI
+    parameters:
+      disk-quota: 512M
+      memory: 256M
+    build-parameters:
+      builder: grunt
+    requires:
+      - name: uaa_Snehplus
+      - name: dest_Snehplus
+      - name: Snehplus_XSJS_api
+        properties:
+          name: core-xsjs-backend
+          url: '~{url}'
+        group: destinations
+  - name: DB_Snehplus
+    type: hdb
+    path: DB_Snehplus
+    requires:
+      - name: hdi_DB_Snehplus
+  - name: Snehplus_XSJS
+    type: nodejs
+    path: Snehplus_XSJS
+    provides:
+      - name: Snehplus_XSJS_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: UAA_service
+      - name: hdi_DB_Snehplus
+      - name: DB_Snehplus
+resources:
+  - name: uaa_Snehplus
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: dest_Snehplus
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service
+  - name: UAA_service
+    type: com.sap.xs.uaa-space
+  - name: hdi_DB_Snehplus
+    parameters:
+      config:
+        schema: DB_Snehplus
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container

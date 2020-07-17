@@ -1,0 +1,15 @@
+<mvc:View controllerName="Snehplus_UI.Snehplus_UI.controller.MainPage" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page showHeader="true" title="SnehPlus" class="sapUiPage" enableScrolling="true" >
+				<headerContent class="HeaderBackground">
+					<Button id="button1" text="Sign-Up" type="Accept" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'SignUp'\}\}\}" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"/>
+					<Button id="button2" text="Sign-In" type="Accept" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'SignIn'\}\}\}" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"/>
+				</headerContent>
+				<content>
+					<Image src="/Snehplus_UI/webapp/Image/MainPagePic.JPG" width="175px" height="130px" id="si1"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,151 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "Snehplus_UI.Snehplus_UI",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "Snehplus_UI.Snehplus_UI.view.Application",
+			"type": "XML",
+			"async": true,
+			"id": "Application"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "Snehplus_UI.Snehplus_UI.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "Snehplus_UI.Snehplus_UI.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"name": "RouteApplication",
+				"pattern": "RouteApplication",
+				"target": ["TargetApplication"]
+			},
+			{
+					"name": "MainPage",
+					"pattern": "",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"MainPage"
+					]
+				},
+				{
+					"name": "SignUp",
+					"pattern": "SignUp",
+					"target": [
+						"SignUp"
+					]
+				},
+				{
+					"name": "SignIn",
+					"pattern": "SignIn",
+					"target": [
+						"SignIn"
+					]
+				},
+				{
+					"name": "Supervisor",
+					"pattern": "Supervisor",
+					"target": [
+						"Supervisor"
+					]
+				},
+				{
+					"name": "User",
+					"pattern": "User",
+					"target": [
+						"User"
+					]
+				}],
+			"targets": {
+				"TargetApplication": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "Application",
+					"viewName": "Application"
+				},
+				"MainPage": {
+					"viewType": "XML",
+					"viewName": "MainPage"
+				},
+				"SignUp": {
+					"viewType": "XML",
+					"viewName": "SignUp"
+				},
+				"SignIn": {
+					"viewType": "XML",
+					"viewName": "SignIn"
+				},
+				"Supervisor": {
+					"viewType": "XML",
+					"viewName": "Supervisor"
+				},
+				"User": {
+					"viewType": "XML",
+					"viewName": "User"
+				}
+			}
+		}
+	}
+}

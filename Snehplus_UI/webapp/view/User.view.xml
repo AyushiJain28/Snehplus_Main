@@ -1,0 +1,92 @@
+<mvc:View controllerName="Snehplus_UI.Snehplus_UI.controller.User" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table" xmlns:l="sap.ui.layout">
+	<Page showHeader="true" title="User Dashboard" class="sapUiPage" enableScrolling="true" >
+		<customHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="User Dashboard" />
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://log" type="Transparent" press="onNavBack" ariaLabelledBy="editButtonLabel"/>
+			</Toolbar>
+
+		</customHeader>
+		<content>
+			<l:BlockLayout id="BlockLayout1"  class="LayoutMargin">
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell  width="100%">
+						<table:Table id="UserTableId" rows="{ path: '/records'}" selectionMode="Single" visible="true" rowSelectionChange="fnRowSelectionChangeSO" visibleRowCount="15">
+							<table:columns>
+								<table:Column hAlign="Center" width="10%" >
+									<Label text="Product ID" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{ProductId}" />
+									</table:template>
+								</table:Column>
+				        		<table:Column hAlign="Center" width="10%" >
+									<Label text="Product Name" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{ProductName}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%" >
+									<Label text="Description" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{Description}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%" >
+									<Label text="Partner" class="contentWhiteLabelUnbold" />
+									<table:template>
+									<Text text="{Partner}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%" >
+									<Label text="Quantity" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{Quantity}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%" >
+									<Label text="Unit of Measure" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{UOM}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%">
+									<Label text="Quantity Unit" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Input placeholder="Enter Units" value="{QuantityUnit}" type="Number" id="QuantityunitID" />
+										
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%" >
+									<Label text="Currency" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{Currency}" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%" >
+									<Label text="Rate" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Text text="{Rate}" id="RateID" />
+									</table:template>
+								</table:Column>
+								<table:Column hAlign="Center" width="10%">
+									<Label text="Total Amount" class="contentWhiteLabelUnbold" />
+									<table:template>
+										<Input placeholder="" value="{Amount}" id="AmountID" />
+									</table:template>
+								</table:Column>
+							</table:columns>
+						</table:Table>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button id="button4" text="CheckOut" press="onClick"  />
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
